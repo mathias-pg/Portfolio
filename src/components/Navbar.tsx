@@ -9,10 +9,11 @@ const Navbar = () => {
         { name: "À propos", icon: <User size={16} /> },
         { name: "Compétences", icon: <Code size={16} /> },
         { name: "Expériences", icon: <Briefcase size={16} /> },
-        { name: "Projets", icon: <FolderGit2 size={16} /> }
+        { name: "Projets", icon: <FolderGit2 size={16} /> },    
+        { name: "Contact", icon: <User size={16} /> }
     ];
     const checkScreenWidth = () => {
-        const breakpoint = 900;
+        const breakpoint = 1030;
         const currentWidth = window.innerWidth;
         if (currentWidth < breakpoint && !mobileView) {
             setMobileView(true);
