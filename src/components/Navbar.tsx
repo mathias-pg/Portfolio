@@ -13,7 +13,7 @@ const Navbar = () => {
         { name: "Contact", icon: <User size={16} /> }
     ];
     const checkScreenWidth = () => {
-        const breakpoint = 1030;
+        const breakpoint = 1080;
         const currentWidth = window.innerWidth;
         if (currentWidth < breakpoint && !mobileView) {
             setMobileView(true);
@@ -32,7 +32,7 @@ const Navbar = () => {
         };
     }, [mobileView]);
     return (
-        <div className="flex flex-col w-full shadow-md">
+        <div className="flex flex-col w-full shadow-md sticky top-0 z-50">
             <div className="flex justify-between items-center p-4 bg-base-100">
                 <a href="#" className="font-bold text-primary flex items-center gap-2 text-3xl md:text-xl transition-all duration-300 hover:scale-105">
                     <CodeXml className="text-secondary" />
@@ -57,7 +57,7 @@ const Navbar = () => {
                             <li key={item.name}>
                                 <a
                                     href="#"
-                                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-primary hover:bg-base-200 hover:text-secondary transition-all duration-200 text-lg"
+                                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-primary hover:bg-base-200 hover:text-secondary transition-all duration-200 text-xl"
                                 >
                                     {item.icon}
                                     {item.name}
@@ -76,7 +76,7 @@ const Navbar = () => {
                             <li key={item.name} className="w-full">
                                 <a
                                     href="#"
-                                    className="flex items-center w-full px-4 py-3 hover:bg-base-200 text-primary hover:text-secondary transition-all duration-200"
+                                    className="flex items-center w-full px-4 py-3 hover:bg-base-200 text-primary hover:text-secondary transition-all duration-200 text-xl"
                                 >
                                     <span className="flex items-center gap-2">
                                         {item.icon}

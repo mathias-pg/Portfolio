@@ -8,13 +8,12 @@ import Competences from './components/Competences'
 function App() {
 
   return (
-    <div>
-      <div>
-        <Navbar/>
-        <Home/>
-      </div>
+    <div className="min-h-screen bg-base-100">
+      <Navbar/>
+      <Home/>
       <About/>
       <Competences/>
+      
     </div>
   )
 }

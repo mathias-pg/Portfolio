@@ -3,7 +3,7 @@ import img from '../assets/photo_identite.png';
 
 const Home = () => {
     return(
-        <div className="flex flex-col-reverse md:flex-row justify-center items-center md:my-32 my-30 ml-5 mr-5">
+        <div className="flex flex-col-reverse md:flex-row justify-center items-center py-20 md:py-32 px-5 container mx-auto">
             <div className="flex flex-col">
                 <h1 className="text-5xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0 text-primary">
                     Bonjour, <br/> je suis {" "}

@@ -18,10 +18,10 @@ const aboutSections =[
 ]
 const About = () => {
     return(
-        <div className="bg-base-300 p-10 mb-10 md:mb-32">
+        <div className="bg-base-300 py-20 px-5">
             <Title title="À propos"/>
-            <div className="md:h-screen flex justify-center">
-                <div className="md:ml-4 space -y-4">
+            <div className="flex justify-center">
+                <div className="md:ml-4 md:mr-4 space-y-4">
                     {aboutSections.map((section) => (
                         <div key={section.id} className="flex flex-col md:flex-row items-center mb-4 p-4 bg-base-100 shadow-lg rounded-lg">
                             <div className="m-6 flex justify-center items-center w-16 h-16 rounded-full bg-base-200">
