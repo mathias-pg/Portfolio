@@ -29,7 +29,7 @@ const About = () => {
                             </div>
                             <div className="flex flex-col">
                                 <h2 className="text-2xl font-bold text-primary">{section.title}</h2>
-                                <p className="text-xl">{section.description}</p>
+                                <p className="text-lg">{section.description}</p>
                             </div>
                         </div>
                     ))}
