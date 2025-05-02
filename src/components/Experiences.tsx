@@ -33,7 +33,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <div className="py-16 px-5 bg-base-300">
+    <div className="py-20 px-5 bg-base-300">
       <div className="container mx-auto">
         <Title title="Expériences" />
         
