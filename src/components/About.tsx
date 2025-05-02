@@ -18,7 +18,7 @@ const aboutSections =[
 ]
 const About = () => {
     return(
-        <div className="bg-base-300 py-20 px-5">
+        <div className="bg-base-300 py-20 px-5" id="About">
             <Title title="À propos"/>
             <div className="flex justify-center">
                 <div className="md:ml-4 md:mr-4 space-y-4">

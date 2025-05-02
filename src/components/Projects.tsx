@@ -135,7 +135,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 const Projects = () => {
     return(
-        <div className="py-20 px-5 md:px-[5%] bg-base-200 rounded-xl">
+        <div className="py-20 px-5 md:px-[5%] bg-base-200 rounded-xl" id="Projects">
             <Title title="Projets"/>
             
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

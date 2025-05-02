@@ -89,7 +89,7 @@ const SkillSection = ({ title, items, colorClass }: { title: string; items: { id
 
 const Competences = () => {
   return (
-    <div className="py-20 px-5 md:px-[5%]">
+    <div className="py-20 px-5 md:px-[5%]" id="Competences">
       <Title title="Compétences" /> 
       
       <div className="mt-8">

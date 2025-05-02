@@ -10,7 +10,7 @@ const Home = () => {
     }, []);
     
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col" id="Home">
             <div className="flex-grow flex flex-col-reverse md:flex-row justify-center items-center py-20 md:py-32 px-5 container mx-auto relative overflow-hidden">
                 <div className="fixed top-0 left-0 w-full h-full -z-10">
                     <div className="absolute top-0 left-0 w-full h-full bg-base-100 opacity-90"></div>

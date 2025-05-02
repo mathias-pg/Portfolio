@@ -5,12 +5,12 @@ const Navbar = () => {
     const [mobileView, setMobileView] = useState(false);
    
     const menuItems = [
-        { name: "Accueil", icon: <Home size={16} /> },
-        { name: "À propos", icon: <User size={16} /> },
-        { name: "Compétences", icon: <Code size={16} /> },
-        { name: "Expériences", icon: <Briefcase size={16} /> },
-        { name: "Projets", icon: <FolderGit2 size={16} /> },    
-        { name: "Contact", icon: <User size={16} /> }
+        { name: "Accueil", icon: <Home size={16} />, ref: "#Home" },
+        { name: "À propos", icon: <User size={16} />, ref: "#About" },
+        { name: "Compétences", icon: <Code size={16} />, ref: "#Competences" },
+        { name: "Expériences", icon: <Briefcase size={16} />, ref: "#Experiences" },
+        { name: "Projets", icon: <FolderGit2 size={16} />, ref: "#Projects" },    
+        { name: "Contact", icon: <User size={16} />, ref: "#Contact" }
     ];
     const checkScreenWidth = () => {
         const breakpoint = 1080;
@@ -56,7 +56,7 @@ const Navbar = () => {
                         {menuItems.map((item) => (
                             <li key={item.name}>
                                 <a
-                                    href="#"
+                                    href={item.ref}
                                     className="flex items-center gap-2 px-4 py-2 rounded-lg text-primary hover:bg-base-200 hover:text-secondary transition-all duration-200 text-xl"
                                 >
                                     {item.icon}
@@ -75,7 +75,7 @@ const Navbar = () => {
                         {menuItems.map((item) => (
                             <li key={item.name} className="w-full">
                                 <a
-                                    href="#"
+                                    href={item.ref}
                                     className="flex items-center w-full px-4 py-3 hover:bg-base-200 text-primary hover:text-secondary transition-all duration-200 text-xl"
                                 >
                                     <span className="flex items-center gap-2">
