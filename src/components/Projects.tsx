@@ -80,7 +80,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {/* Image container avec overlay au survol */}
             <div className="relative h-64 bg-base-200 overflow-hidden">
                 <img 
                     src={project.image} 
@@ -89,7 +88,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}></div>
                 
-                {/* Liens qui apparaissent au survol */}
                 <div className={`absolute bottom-4 right-4 flex gap-3 transition-all duration-300 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                     {project.repoLink && (
                         <a 
@@ -115,13 +113,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     )}
                 </div>
             </div>
-            
-            {/* Contenu du projet */}
+
             <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-primary mb-2">{project.name}</h3>
                 <p className="text-base-content/80 mb-4 flex-grow">{project.description}</p>
-                
-                {/* Technologies utilisées */}
+
                 <div className="flex flex-wrap gap-2 mt-auto">
                     {project.technologies.map((tech, index) => (
                         <span 
