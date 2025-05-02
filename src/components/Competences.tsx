@@ -62,7 +62,7 @@ const outils = [
 // Composant pour une seule carte de compétence
 const SkillCard = ({ name, icon }: { name: string; icon: string }) => {
   return (
-    <div className="flex flex-col items-center bg-base-100 rounded-lg shadow-md hover:shadow-xl p-4 transition-all duration-300 hover:scale-105 border border-base-300">
+    <div className="flex flex-col items-center bg-base-200 rounded-lg shadow-md hover:shadow-xl p-4 transition-all duration-300 hover:scale-105 border border-base-300">
       <div className="w-mb-20 h-20 flex items-center justify-center">
         <img src={icon} alt={name} className="max-w-full max-h-full object-contain" />
       </div>
@@ -89,7 +89,7 @@ const SkillSection = ({ title, items, colorClass }: { title: string; items: { id
 
 const Competences = () => {
   return (
-    <div className="py-20 px-5 bg-base-200 md:px-[5%]">
+    <div className="py-20 px-5 md:px-[5%]">
       <Title title="Compétences" /> 
       
       <div className="mt-8">
