@@ -1,6 +1,7 @@
 import Title from "./Title";
 import { Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -12,13 +13,10 @@ const Contact = () => {
     
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     
-    interface FormData {
-        name: string;
-        email: string;
-        subject: string;
-        message: string;
-    }
+    const form = useRef<HTMLFormElement>(null);
+    
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -27,29 +25,37 @@ const Contact = () => {
             [name]: value
         }));
     };
-    
-    interface SubmitEvent {
-        preventDefault: () => void;
-    }
 
-    const handleSubmit = (e: SubmitEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setError(null);
+
+        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
         
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setIsSubmitted(true);
-            
-            setTimeout(() => {
-                setIsSubmitted(false);
-                setFormData({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: ""
-                });
-            }, 3000);
-        }, 1500);
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current!, PUBLIC_KEY)
+            .then((result) => {
+                console.log('Email envoyé avec succès:', result.text);
+                setIsSubmitting(false);
+                setIsSubmitted(true);
+                
+                setTimeout(() => {
+                    setIsSubmitted(false);
+                    setFormData({
+                        name: "",
+                        email: "",
+                        subject: "",
+                        message: ""
+                    });
+                }, 3000);
+            })
+            .catch((error) => {
+                console.error('Erreur lors de l\'envoi de l\'email:', error);
+                setIsSubmitting(false);
+                setError("Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.");
+            });
     };
     
     return(
@@ -74,7 +80,13 @@ const Contact = () => {
                                 </div>
                             </div>
                         ) : (
-                            <div className="space-y-6">
+                            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+                                {error && (
+                                    <div className="p-4 bg-red-50 text-red-700 rounded-lg border border-red-200">
+                                        {error}
+                                    </div>
+                                )}
+                                
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-base-content/70 mb-2">
@@ -141,7 +153,7 @@ const Contact = () => {
                                 </div>
                                 
                                 <button
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     className={`w-full py-3 px-6 flex items-center justify-center gap-2 rounded-lg ${
                                         isSubmitting
                                             ? "bg-gray-400 cursor-not-allowed"
@@ -161,7 +173,7 @@ const Contact = () => {
                                         </>
                                     )}
                                 </button>
-                            </div>
+                            </form>
                         )}
                     </div>
                 </div>
