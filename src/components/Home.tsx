@@ -48,7 +48,7 @@ const Home = () => {
                     
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8">
                         <a 
-                            href="#" 
+                            href="mailto:mathias.petibongravier@gmail.com"
                             className="btn border-none bg-base-200 hover:bg-secondary hover:text-white text-base-content font-medium transition-all duration-300 group flex items-center gap-2"
                         >
                             <Mail className="text-secondary group-hover:text-white transition-colors duration-300" size={18} />
@@ -112,7 +112,7 @@ const Home = () => {
             </div>
             
             <div className="flex justify-center pb-8">
-                <a href="#about" className="animate-bounce">
+                <a href="#About" className="animate-bounce">
                     <ChevronDown size={32} className="text-primary" />
                 </a>
             </div>
