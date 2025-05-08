@@ -9,17 +9,28 @@ html {
 }
 
 
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
-
-#root {
-  max-width: 100vw;
-}
-
-.overflow-container {
-  overflow-x: hidden;
+html, body, #root {
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Force tous les éléments enfants à respecter la largeur */
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Correction pour les éléments absolus */
+.absolute {
+  max-width: 100vw;
+}
+
+/* Limiter les largeurs de container */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,5 +1,5 @@
 import { CodeXml, Home, User, Code, Briefcase, FolderGit2, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [mobileView, setMobileView] = useState(false);
@@ -24,6 +24,9 @@ const Navbar = () => {
             setShowMenu(true);
         }
     };
+    
+    const navRef = useRef<HTMLDivElement | null>(null);
+    
     useEffect(() => {
         checkScreenWidth();
         window.addEventListener('resize', checkScreenWidth);
@@ -31,8 +34,9 @@ const Navbar = () => {
             window.removeEventListener('resize', checkScreenWidth);
         };
     }, [mobileView]);
+
     return (
-        <div className="flex flex-col w-full shadow-md sticky top-0 z-50">
+        <div ref={navRef} className="flex flex-col w-full shadow-md fixed top-0 left-0 right-0 z-50 bg-base-100">
             <div className="flex justify-between items-center p-4 bg-base-100">
                 <a href="#" className="font-bold text-primary flex items-center gap-2 text-3xl md:text-xl transition-all duration-300 hover:scale-105">
                     <CodeXml className="text-secondary" />
