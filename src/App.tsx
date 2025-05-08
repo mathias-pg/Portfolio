@@ -14,13 +14,15 @@ function App() {
   return (
     <div className="min-h-screen bg-base-100">
       <Navbar/>
-      <Home/>
-      <About/>
-      <Competences/>
-      <Experiences/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <div className="overflow-x-hidden">
+        <Home/>
+        <About/>
+        <Competences/>
+        <Experiences/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </div>
     </div>
   )
 }

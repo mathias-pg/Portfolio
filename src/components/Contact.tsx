@@ -59,7 +59,7 @@ const Contact = () => {
     };
     
     return(
-        <div className="py-20 px-5 bg-base-300" id="Contact">
+        <div className="py-20 px-5 bg-base-300 md:px-[5%]" id="Contact">
             <div className="container mx-auto max-w-10xl">
                 <Title title="Contact"/>
                 

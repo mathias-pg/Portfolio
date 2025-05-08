@@ -12,13 +12,13 @@ const Home = () => {
     return (
         <div className="min-h-screen flex flex-col" id="Home">
             <div className="flex-grow flex flex-col-reverse md:flex-row justify-center items-center py-20 md:py-32 px-5 container mx-auto relative overflow-hidden">
-                <div className="fixed top-0 left-0 w-full h-full -z-10">
+                <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-base-100 opacity-90"></div>
-                    <div className="absolute top-0 left-0 w-full h-full">
-                        <div className="absolute top-5 left-5 w-96 h-96 rounded-full bg-primary opacity-20 blur-3xl"></div>
-                        <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-secondary opacity-20 blur-3xl"></div>
-                        <div className="absolute top-1/2 right-1/4 w-80 h-80 rounded-full bg-primary opacity-15 blur-3xl"></div>
-                        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 rounded-full bg-secondary opacity-15 blur-3xl"></div>
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                        <div className="absolute top-5 left-5 w-1/2 h-1/2 max-w-md max-h-md rounded-full bg-primary opacity-20 blur-3xl"></div>
+                        <div className="absolute bottom-10 right-10 w-1/2 h-1/2 max-w-md max-h-md rounded-full bg-secondary opacity-20 blur-3xl"></div>
+                        <div className="absolute top-1/2 right-10 w-1/3 h-1/3 max-w-sm max-h-sm rounded-full bg-primary opacity-15 blur-3xl"></div>
+                        <div className="absolute bottom-1/3 left-10 w-1/3 h-1/3 max-w-sm max-h-sm rounded-full bg-secondary opacity-15 blur-3xl"></div>
                     </div>
                 </div>
                 

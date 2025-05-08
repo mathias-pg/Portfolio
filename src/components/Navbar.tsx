@@ -39,8 +39,7 @@ const Navbar = () => {
                     MATHIAS
                     <span className="text-secondary font-extrabold">DEV</span>
                 </a>
-               
-                {/* Bouton hamburger pour mobile uniquement */}
+
                 {mobileView && (
                     <button
                         className="p-2 rounded-lg hover:bg-base-200 transition-colors"
@@ -50,7 +49,6 @@ const Navbar = () => {
                     </button>
                 )}
                
-                {/* Menu horizontal pour desktop */}
                 {!mobileView && (
                     <ul className="flex space-x-2">
                         {menuItems.map((item) => (
@@ -67,8 +65,7 @@ const Navbar = () => {
                     </ul>
                 )}
             </div>
-           
-            {/* Menu vertical pour mobile */}
+
             {mobileView && showMenu && (
                 <div className="bg-base-100 w-full shadow-inner">
                     <ul className="flex flex-col w-full">
