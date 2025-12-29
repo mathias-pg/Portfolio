@@ -11,52 +11,70 @@ import imgVBA from "../assets/technologies/vba.png";
 import imgSQL from "../assets/technologies/sql.png";
 import imgPLSQL from "../assets/technologies/plsql.png";
 import imgSPARQL from "../assets/technologies/sparql.png";
-import imgGitLab from "../assets/technologies/gitlab.png";
-import imgGitHub from "../assets/technologies/github.png";
 import imgDocker from "../assets/technologies/docker.png";
 import imgMySQL from "../assets/technologies/mysql.png";
-import imgPenpot from "../assets/technologies/penpot.png";
-import imgVSCode from "../assets/technologies/vscode.png";
-import imgEclipse from "../assets/technologies/eclipse.png";
-import imgIntelliJ from "../assets/technologies/intellij.png";
-import imgAndroidStudio from "../assets/technologies/android_studio.png";
-import imgOracleSQL from "../assets/technologies/oracle_sql_developper.png";
-import imgMicrosoftOffice from "../assets/technologies/microsoft.png";
-import imgVisualParadigm from "../assets/technologies/visual_paradigm.png";
-import imgCodeBlocks from "../assets/technologies/code_blocks.png";
+import imgAPI from "../assets/technologies/api.png";
+import imgBash from "../assets/technologies/bash.png";
+import imgBootstrap from "../assets/technologies/bootstrap.png";
+import imgC from "../assets/technologies/c.png";
+import imgCICD from "../assets/technologies/cicd.png";
+import imgDjango from "../assets/technologies/django.png";
+import imgGit from "../assets/technologies/git.png";
+import imgKubernetes from "../assets/technologies/kubernetes.png";
+import imgLinux from "../assets/technologies/linux.png";
+import imgMariaDB from "../assets/technologies/mariadb.png";
+import imgOracleDatabase from "../assets/technologies/oracledatabase.png";
+import imgPostreSQL from "../assets/technologies/postgresql.png";
+import imgReact from "../assets/technologies/react.png";
+import imgSQLite from "../assets/technologies/sqlite.png";
+import imgSymfony from "../assets/technologies/symfony.png";
+import imgTypeScript from "../assets/technologies/typescript.png";
+import imgUML from "../assets/technologies/uml.png";
 
 const langages_prog = [
     { id: 1, name: "HTML", icon: imgHTML },
     { id: 2, name: "CSS", icon: imgCSS },
     { id: 3, name: "JavaScript", icon: imgJS },
     { id: 4, name: "PHP", icon: imgPHP },
-    { id: 7, name: "Java", icon: imgJava },
-    { id: 8, name: "C++", icon: imgCPlusPlus },
-    { id: 9, name: "Python", icon: imgPython },
-    { id: 10, name: "C#", icon: imgCSharp },
-    { id: 11, name: "VBA", icon: imgVBA },
+    { id: 5, name: "Java", icon: imgJava },
+    { id: 6, name: "C++", icon: imgCPlusPlus },
+    { id: 7, name: "Python", icon: imgPython },
+    { id: 8, name: "C#", icon: imgCSharp },
+    { id: 9, name: "SQL", icon: imgSQL },
+    { id: 10, name: "PL/SQL", icon: imgPLSQL },
+    { id: 11, name: "SPARQL", icon: imgSPARQL },
+    { id: 12, name: "Bash", icon: imgBash },
 ]
 
-const langages_requetes = [
-    { id: 1, name: "SQL", icon: imgSQL },
-    { id: 2, name: "PL/SQL", icon: imgPLSQL },
-    { id: 3, name: "SPARQL", icon: imgSPARQL },
+const bdd = [
+    { id: 1, name: "MySQL", icon: imgMySQL },
+    { id: 2, name: "MariaDB", icon: imgMariaDB },
+    { id: 3, name: "PostgreSQL", icon: imgPostreSQL },
+    { id: 4, name: "SQLite", icon: imgSQLite },
+    { id: 5, name: "Oracle Database", icon: imgOracleDatabase },
+]
+
+const frameworks = [
+    { id: 1, name: "Django", icon: imgDjango },
+    { id: 2, name: "Symfony", icon: imgSymfony },
+    { id: 3, name: "Bootstrap", icon: imgBootstrap },
 ]
 
 const outils = [
-    { id: 1, name: "GitLab", icon: imgGitLab },
-    { id: 2, name: "GitHub", icon: imgGitHub },
+    { id: 1, name: "API REST", icon: imgAPI },
+    { id: 2, name: "Git", icon: imgGit },
     { id: 3, name: "Docker", icon: imgDocker },
-    { id: 4, name: "MySQL", icon: imgMySQL },
-    { id: 5, name: "Penpot", icon: imgPenpot },
-    { id: 6, name: "Visual Studio Code", icon: imgVSCode },
-    { id: 7, name: "Eclipse", icon: imgEclipse },
-    { id: 8, name: "IntelliJ IDEA", icon: imgIntelliJ },
-    { id: 9, name: "Android Studio", icon: imgAndroidStudio },
-    { id: 10, name: "Oracle SQL Developer", icon: imgOracleSQL },
-    { id: 11, name: "Microsoft Office", icon: imgMicrosoftOffice },
-    { id: 12, name: "Visual Paradigm", icon: imgVisualParadigm },
-    { id: 13, name: "Code::Blocks", icon: imgCodeBlocks },
+    { id: 4, name: "Kubernetes", icon: imgKubernetes },
+    { id: 5, name: "CI/CD", icon: imgCICD },
+    { id: 6, name: "Linux", icon: imgLinux },
+    { id: 7, name: "Modélisation UML", icon: imgUML },
+]
+
+const notions = [
+    { id: 1, name: "C", icon: imgC },
+    { id: 2, name: "React", icon: imgReact },
+    { id: 3, name: "TypeScript", icon: imgTypeScript },
+    { id: 4, name: "VBA", icon: imgVBA },
 ]
 
 // Composant pour une seule carte de compétence
@@ -94,20 +112,32 @@ const Competences = () => {
       
       <div className="mt-8">
         <SkillSection 
-          title="Langages de programmation" 
+          title="Développement" 
           items={langages_prog} 
           colorClass="text-primary" 
         />
         
         <SkillSection 
-          title="Langages de requêtes" 
-          items={langages_requetes} 
+          title="Base de données" 
+          items={bdd} 
+          colorClass="text-primary" 
+        />
+
+        <SkillSection 
+          title="Frameworks" 
+          items={frameworks} 
           colorClass="text-primary" 
         />
         
         <SkillSection 
-          title="Outils et environnements" 
+          title="Outils" 
           items={outils} 
+          colorClass="text-primary" 
+        />
+
+        <SkillSection 
+          title="Notions" 
+          items={notions} 
           colorClass="text-primary" 
         />
       </div>

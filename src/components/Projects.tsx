@@ -5,6 +5,10 @@ import AgoraXAppli from "../assets/projects/AgoraXAppli.png";
 import JOParis from "../assets/projects/JOParis.png";
 import mathbattle from "../assets/projects/mathbattle.png";
 import watersort from "../assets/projects/watersort.png";
+import supportdesk from "../assets/projects/supportdesk.png";
+import portfolio from "../assets/projects/portfolio.png";
+import gympulse from "../assets/projects/gympulse.png";
+import esperancedevie from "../assets/projects/esperancedevie.png";
 import { Github, ExternalLink, Code } from "lucide-react";
 import { useState } from "react";
 
@@ -23,7 +27,7 @@ const projects: Project[] = [
         id: 1,
         name: "Plateforme de démocratie participative AgoraX",
         description: "Site web de la plateforme de démocratie participative AgoraX. Permet de créer un groupe pour voter sur des propositions. Un groupe possède différents rôles : membre, administrateur, modérateur, assesseur, scrutateur et décideur. Un administrateur peut créer un groupe et gérer les membres. Un modérateur peut gérer les propositions et les commentaires. Un membre peut voter sur les propositions. Un assesseur peut gérer les votes. Un scrutateur peut gérer les résultats. Un décideur peut gérer les budgets.",
-        technologies: ["HTML", "CSS", "PHP", "JavaScript"],
+        technologies: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
         demoLink: "https://projets.iut-orsay.fr/saes3-dteixei/ProjetS3/",
         repoLink: "https://github.com/mathias-pg/AgoraX",
         image: AgoraX
@@ -55,6 +59,38 @@ const projects: Project[] = [
     },
     {
         id: 5,
+        name: "Plateforme de ticketing SupportDesk",
+        description: "Plateforme de gestion de tickets de support permettant aux clients de déposer des demandes sans authentification, aux opérateurs d'analyser et dispatcher les incidents vers les experts qualifiés, et de suivre l'évolution des tickets à travers différents états. De plus, un tableau de bord analytique pour les superviseurs offrant une vue d'ensemble de l'activité du service support.",
+        technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap", "SQLite"],
+        repoLink: "https://github.com/mathias-pg/SupportDesk",
+        image: supportdesk
+    },
+    {
+        id: 6,
+        name: "Application web d'analyse entre espérance de vie et revenus en France",
+        description: "Application web d'analyse répondant à la question suivante : L'espérance de vie varie-t-elle fortement selon les revenus par département et par région ?",
+        technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Bootstrap"],
+        repoLink: "https://github.com/mathias-pg/EsperanceVieEtRevenus",
+        image: esperancedevie
+    },
+    {
+        id: 6,
+        name: "Application mobile GymPulse (En cours de développement)",
+        description: "GymPulse est une application mobile de suivi d'entraînement permettant d'enregistrer ses séances de musculation avec les exercices effectués, les séries, répétitions et poids utilisés. Permet de suivre sa progression sportive grâce à des statistiques détaillées et un historique de toutes ses sessions.",
+        technologies: ["React Native", "TypeScript", "Javascript", "Expo", "Supabase"],
+        repoLink: "https://github.com/mathias-pg/GymPulse",
+        image: gympulse
+    },
+    {
+        id: 6,
+        name: "Portfolio Personnel",
+        description: "Portfolio personnel présentant mes compétences, expériences et projets réalisés.",
+        technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+        repoLink: "https://github.com/mathias-pg/Portfolio",
+        image: portfolio
+    },
+    {
+        id: 7,
         name: "CWAC",
         description: "Site web d'une école fictive de survie en pleine nature",
         technologies: ["HTML", "CSS"],
@@ -62,7 +98,7 @@ const projects: Project[] = [
         image: cwac
     },
     {
-        id: 6,
+        id: 8,
         name: "WaterSort",
         description: "Jeu de tri de bouteilles d'eau",
         technologies: ["Python"],

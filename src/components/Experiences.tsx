@@ -3,6 +3,7 @@ import { MapPin, Calendar, Building2 } from "lucide-react";
 import institutOptique from "../assets/companies/institutOptique.png";
 import auchan from "../assets/companies/auchan.png";
 import iTek from "../assets/companies/itek.png";
+import parismusees from "../assets/companies/parismusees.png";
 
 const experiences = [
     {
@@ -10,7 +11,7 @@ const experiences = [
         role: "Stage de 3ème",
         company: "Institut d'Optique Graduate School",
         period: "Décembre 2019 - Décembre 2019",
-        location: "Palaiseau, Essonne",
+        location: "2 Av. Augustin Fresnel, 91120 Palaiseau",
         image : institutOptique
     },
     {
@@ -18,7 +19,7 @@ const experiences = [
         role: "Equipier magasin",
         company: "Auchan",
         period: "Juillet 2023 - Août 2023 et Juillet 2024 - Août 2024",
-        location: "Villebon-sur-Yvette, Essonne",
+        location: "2 Chem. de Briis, 91140 Villebon-sur-Yvette",
         image: auchan  
     },
     {
@@ -26,8 +27,16 @@ const experiences = [
         role: "Stage en développement informatique",
         company: "I-Tek",
         period: "Avril 2025 - Juillet 2025",
-        location: "Trémeur, Côtes-d'Armor",
+        location: "Z.A, Les Dineux, 22250 Trémeur",
         image: iTek
+    },
+    {
+        id: 4,
+        role: "Développeur informatique en alternance",
+        company: "Paris Musées",
+        period: "Septembre 2025 - Septembre 2026",
+        location: "30 rue de Chabrol, 75010 Paris",
+        image: parismusees
     }
 ]
 
