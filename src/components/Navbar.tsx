@@ -38,7 +38,7 @@ const Navbar = () => {
     return (
         <div ref={navRef} className="flex flex-col w-full shadow-md fixed top-0 left-0 right-0 z-50">
             <div className="flex justify-between items-center p-4 bg-base-100">
-                <a href="#" className="font-bold text-primary flex items-center gap-2 text-3xl md:text-xl transition-all duration-300 hover:scale-105">
+                <a href="#" className="font-bold text-primary flex items-center gap-2 text-xl hover:scale-105">
                     <CodeXml className="text-secondary" />
                     MATHIAS
                     <span className="text-secondary font-extrabold">DEV</span>
