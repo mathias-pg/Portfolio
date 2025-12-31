@@ -30,6 +30,8 @@ import imgSQLite from "../assets/technologies/sqlite.png";
 import imgSymfony from "../assets/technologies/symfony.png";
 import imgTypeScript from "../assets/technologies/typescript.png";
 import imgUML from "../assets/technologies/uml.png";
+import imgGodot from "../assets/technologies/godot.png";
+import imgUnity from "../assets/technologies/unity.png";
 
 const langages_prog = [
     { id: 1, name: "HTML", icon: imgHTML },
@@ -68,6 +70,8 @@ const outils = [
     { id: 5, name: "CI/CD", icon: imgCICD },
     { id: 6, name: "Linux", icon: imgLinux },
     { id: 7, name: "Modélisation UML", icon: imgUML },
+    { id: 8, name: "Godot", icon: imgGodot },
+    { id: 9, name: "Unity", icon: imgUnity },
 ]
 
 const notions = [
