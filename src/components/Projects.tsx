@@ -8,6 +8,8 @@ import watersort from "../assets/projects/watersort.png";
 import supportdesk from "../assets/projects/supportdesk.png";
 import portfolio from "../assets/projects/portfolio.png";
 import gympulse from "../assets/projects/gympulse.png";
+import s102 from "../assets/projects/s102.png";
+import keyofsuccess from "../assets/projects/keyofsucces.png";
 import esperancedevie from "../assets/projects/esperancedevie.png";
 import { Github, ExternalLink, Code } from "lucide-react";
 import { useState } from "react";
@@ -28,14 +30,13 @@ const projects: Project[] = [
         name: "Plateforme de démocratie participative AgoraX",
         description: "Site web de la plateforme de démocratie participative AgoraX. Permet de créer un groupe pour voter sur des propositions. Un groupe possède différents rôles : membre, administrateur, modérateur, assesseur, scrutateur et décideur. Un administrateur peut créer un groupe et gérer les membres. Un modérateur peut gérer les propositions et les commentaires. Un membre peut voter sur les propositions. Un assesseur peut gérer les votes. Un scrutateur peut gérer les résultats. Un décideur peut gérer les budgets.",
         technologies: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
-        demoLink: "https://projets.iut-orsay.fr/saes3-dteixei/ProjetS3/",
         repoLink: "https://github.com/mathias-pg/AgoraX",
         image: AgoraX
     },
     {
         id: 2,
         name: "Application AgoraX",
-        description: "Application Java de la plateforme de démocratie participative AgoraX pour les décideurs",
+        description: "Application Java de la plateforme de démocratie participative AgoraX pour les décideurs.",
         technologies: ["Java"],
         repoLink: "https://github.com/mathias-pg/Application-Decideur-AgoraX",
         image: AgoraXAppli
@@ -43,19 +44,27 @@ const projects: Project[] = [
     {
         id: 3,
         name: "Application de gestion des JO de Paris 2024",
-        description: "Application Java qui permet la gestions des épreuves, des sessions, des athlètes, des équipes et du planning des JO de Paris 2024",
+        description: "Application Java qui permet la gestions des épreuves, des sessions, des athlètes, des équipes et du planning des JO de Paris 2024.",
         technologies: ["Java"],
         repoLink: "https://github.com/mathias-pg/Application-JOParis2024",
         image: JOParis
     },
     {
         id: 4,
-        name: "MathBattle",
-        description: "Jeu de cartes revisité permettant l'apprentissage ludique des mathématiques",
-        technologies: ["GDScript"],
+        name: "Jeu vidéo MathBattle",
+        description: "Jeu de cartes revisité permettant l'apprentissage ludique des mathématiques.",
+        technologies: ["Godot", "GDScript"],
         demoLink: "https://mathias-pg.itch.io/mathbattle",
         repoLink: "https://github.com/mathias-pg/MathBattle",
         image: mathbattle
+    },
+    {
+        id: 4,
+        name: "Jeu vidéo Key Of Success (En cours de développement)",
+        description: "Key of Success est un jeu d'horreur coopératif en 3D où les joueurs explorent une carte type manoir hanté tout en étant traqués par des monstres. Ils doivent collaborer pour résoudre des énigmes et survivre ensemble pour atteindre l'objectif final.",
+        technologies: ["Unity", "C#"],
+        demoLink: "",
+        image: keyofsuccess
     },
     {
         id: 5,
@@ -90,9 +99,17 @@ const projects: Project[] = [
         image: portfolio
     },
     {
+        id: 6,
+        name: "Outil de retouche d'images",
+        description: "Outil de retouche d'images permettant de faire pivoter l’image, de modifier la luminosité, le contraste, etc...",
+        technologies: ["C++"],
+        repoLink: "https://github.com/mathias-pg/S-102",
+        image: s102
+    },
+    {
         id: 7,
         name: "CWAC",
-        description: "Site web d'une école fictive de survie en pleine nature",
+        description: "Site web d'une école fictive de survie en pleine nature.",
         technologies: ["HTML", "CSS"],
         repoLink: "https://github.com/mathias-pg/CWAC",
         image: cwac
@@ -158,7 +175,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     {project.technologies.map((tech, index) => (
                         <span 
                             key={index} 
-                            className="px-3 py-1 text-sm font-medium bg-base-200 text-primary rounded-full"
+                            className="px-3 py-1 text-sm font-medium bg-base-200 text-secondary rounded-full"
                         >
                             <Code size={14} className="inline mr-1" /> {tech}
                         </span>

@@ -21,7 +21,7 @@ const About = () => {
                     {aboutSections.map((section) => (
                         <div key={section.id} className="flex flex-col md:flex-row items-center mb-4 p-4 bg-base-100 shadow-lg rounded-lg">
                             <div className="flex flex-col">
-                                <h2 className="text-2xl font-bold text-primary">{section.title}</h2>
+                                <h2 className="text-2xl font-bold text-primary mb-2">{section.title}</h2>
                                 <p className="text-lg">{section.description}</p>
                             </div>
                         </div>
