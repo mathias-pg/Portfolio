@@ -59,7 +59,7 @@ const projects: Project[] = [
         image: mathbattle
     },
     {
-        id: 4,
+        id: 5,
         name: "Jeu vidéo Key Of Success (En cours de développement)",
         description: "Key of Success est un jeu d'horreur coopératif en 3D où les joueurs explorent une carte type manoir hanté tout en étant traqués par des monstres. Ils doivent collaborer pour résoudre des énigmes et survivre ensemble pour atteindre l'objectif final.",
         technologies: ["Unity", "C#"],
@@ -67,7 +67,7 @@ const projects: Project[] = [
         image: keyofsuccess
     },
     {
-        id: 5,
+        id: 6,
         name: "Plateforme de ticketing SupportDesk",
         description: "Plateforme de gestion de tickets de support permettant aux clients de déposer des demandes sans authentification, aux opérateurs d'analyser et dispatcher les incidents vers les experts qualifiés, et de suivre l'évolution des tickets à travers différents états. De plus, un tableau de bord analytique pour les superviseurs offrant une vue d'ensemble de l'activité du service support.",
         technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap", "SQLite"],
@@ -75,7 +75,7 @@ const projects: Project[] = [
         image: supportdesk
     },
     {
-        id: 6,
+        id: 7,
         name: "Application web d'analyse entre espérance de vie et revenus en France",
         description: "Application web d'analyse répondant à la question suivante : L'espérance de vie varie-t-elle fortement selon les revenus par département et par région ?",
         technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Bootstrap"],
@@ -83,7 +83,7 @@ const projects: Project[] = [
         image: esperancedevie
     },
     {
-        id: 6,
+        id: 8,
         name: "Application mobile GymPulse (En cours de développement)",
         description: "GymPulse est une application mobile de suivi d'entraînement permettant d'enregistrer ses séances de musculation avec les exercices effectués, les séries, répétitions et poids utilisés. Permet de suivre sa progression sportive grâce à des statistiques détaillées et un historique de toutes ses sessions.",
         technologies: ["React Native", "TypeScript", "Javascript", "Expo", "Supabase"],
@@ -91,7 +91,7 @@ const projects: Project[] = [
         image: gympulse
     },
     {
-        id: 6,
+        id: 9,
         name: "Portfolio Personnel",
         description: "Portfolio personnel présentant mes compétences, expériences et projets réalisés.",
         technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
@@ -99,7 +99,7 @@ const projects: Project[] = [
         image: portfolio
     },
     {
-        id: 6,
+        id: 10,
         name: "Outil de retouche d'images",
         description: "Outil de retouche d'images permettant de faire pivoter l’image, de modifier la luminosité, le contraste, etc...",
         technologies: ["C++"],
@@ -107,7 +107,7 @@ const projects: Project[] = [
         image: s102
     },
     {
-        id: 7,
+        id: 11,
         name: "CWAC",
         description: "Site web d'une école fictive de survie en pleine nature.",
         technologies: ["HTML", "CSS"],
@@ -115,7 +115,7 @@ const projects: Project[] = [
         image: cwac
     },
     {
-        id: 8,
+        id: 12,
         name: "WaterSort",
         description: "Jeu de tri de bouteilles d'eau",
         technologies: ["Python"],
