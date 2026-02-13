@@ -32,6 +32,9 @@ import imgTypeScript from "../assets/technologies/typescript.png";
 import imgUML from "../assets/technologies/uml.png";
 import imgGodot from "../assets/technologies/godot.png";
 import imgUnity from "../assets/technologies/unity.png";
+import imgMicrosoftSQLServer from "../assets/technologies/microsoftsqlserver.png";
+import imgGitlab from "../assets/technologies/gitlab.png";
+import imgGithub from "../assets/technologies/github.png";
 
 const langages_prog = [
     { id: 1, name: "HTML", icon: imgHTML },
@@ -54,6 +57,7 @@ const bdd = [
     { id: 3, name: "PostgreSQL", icon: imgPostreSQL },
     { id: 4, name: "SQLite", icon: imgSQLite },
     { id: 5, name: "Oracle Database", icon: imgOracleDatabase },
+    { id: 6, name: "Microsoft SQL Server", icon: imgMicrosoftSQLServer },
 ]
 
 const frameworks = [
@@ -72,6 +76,8 @@ const outils = [
     { id: 7, name: "Modélisation UML", icon: imgUML },
     { id: 8, name: "Godot", icon: imgGodot },
     { id: 9, name: "Unity", icon: imgUnity },
+    { id: 10, name: "GitLab", icon: imgGitlab },
+    { id: 11, name: "GitHub", icon: imgGithub },
 ]
 
 const notions = [
