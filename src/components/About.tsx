@@ -8,8 +8,8 @@ const aboutSections =[
     },
     {
         id: 2,
-        title: "Recherche d'une école d'ingénieur",
-        description: "Pour la suite de mes études, je suis à la recherche d'une école d'ingénieur pour acquérir davantage de compétences techniques et professionnelles dans le domaine de l'informatique.",
+        title: "A la recherche d'une école d'ingénieur et d'une alternance",
+        description: "Pour la suite de mes études, je suis à la recherche d'une école d'ingénieur en alternance pour acquérir davantage de compétences techniques et professionnelles dans le domaine de l'informatique.",
     }
 ]
 const About = () => {
