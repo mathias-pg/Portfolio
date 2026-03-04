@@ -1,14 +1,15 @@
 import Title from "./Title";
-import { MapPin, Calendar, Building2 } from "lucide-react";
+import { MapPin, Calendar, Building2, Info } from "lucide-react";
 import institutOptique from "../assets/companies/institutOptique.png";
 import auchan from "../assets/companies/auchan.png";
 import iTek from "../assets/companies/itek.png";
 import parismusees from "../assets/companies/parismusees.png";
 
+
 const experiences = [
     {
         id: 1,
-        role: "Stage de 3ème",
+        role: "Stage d'observation de 3ème",
         company: "Institut d'Optique Graduate School",
         period: "Décembre 2019 - Décembre 2019",
         location: "2 Av. Augustin Fresnel, 91120 Palaiseau",
@@ -20,15 +21,17 @@ const experiences = [
         company: "Auchan",
         period: "Juillet 2023 - Août 2023 et Juillet 2024 - Août 2024",
         location: "2 Chem. de Briis, 91140 Villebon-sur-Yvette",
-        image: auchan  
+        subject: "→ Gestion des clients et des stocks.",
+        image: auchan,
     },
     {
         id: 3,
-        role: "Stage en développement informatique",
+        role: "Stage en tant que développeur informatique",
         company: "I-Tek",
         period: "Avril 2025 - Juillet 2025",
         location: "Z.A, Les Dineux, 22250 Trémeur",
-        image: iTek
+        subject: "→ Automatisation de tâches via VBA, WLangage (WinDev) et SQL.",
+        image: iTek,
     },
     {
         id: 4,
@@ -36,6 +39,7 @@ const experiences = [
         company: "Paris Musées",
         period: "Septembre 2025 - Septembre 2026",
         location: "30 rue de Chabrol, 75010 Paris",
+        subject: `→ Conception et maintenance de programmes Java\n\n→ Développement d’une application web de synchronisation pour Paris Musées :\n  - Développé en PHP avec Symfony, HTML, CSS, Javascript (+jQuery), C# et Bootstrap.\n  - Création et gestion d’une base de données MariaDB.\n  - Synchronise les collections photographiques des musées via deux API REST.\n\n→ Développement d’une application web dashboard pour Paris Musées :\n  - Développé en PHP avec Symfony, HTML, CSS, Javascript, C#, Bootstrap.\n  - Création et gestion d’une base de données MariaDB et utilisation d’une base de données Microsoft SQL Server.\n  - Création de graphes avec Chart.js pour suivre les collections.`,
         image: parismusees
     }
 ]
@@ -81,6 +85,12 @@ const Experiences = () => {
                             <MapPin size={16} />
                             <span>{exp.location}</span>
                           </div>
+                          {exp.subject && (
+                            <div className="flex items-start justify-center md:justify-start gap-2 mt-1">
+                              <Info size={16} className="flex-shrink-0 mt-0.5" />
+                              <span className="whitespace-pre-line">{exp.subject}</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>

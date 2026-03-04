@@ -87,12 +87,10 @@ const Home = () => {
                         <a
                             href="/CV_Mathias_Petibon-Gravier.pdf"
                             download
-                            className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-secondary p-0.5 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105"
+                            className="btn border-2 border-secondary bg-transparent hover:bg-secondary text-secondary hover:text-white font-semibold transition-all duration-300 group flex items-center gap-2 w-fit px-10 py-6 text-lg rounded-xl"
                         >
-                            <span className="relative flex items-center gap-2 rounded-md bg-primary px-8 py-3 transition-all duration-300 group-hover:bg-opacity-0">
-                                <FileDown size={20} />
-                                Télécharger mon CV
-                            </span>
+                            <FileDown className="group-hover:text-white transition-colors duration-300" size={22} />
+                            Télécharger mon CV
                         </a>
                     </div>
                 </div>
